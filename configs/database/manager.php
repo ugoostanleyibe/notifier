@@ -3,6 +3,7 @@
 require "config.php";
 
 class DBManager {
+
 	private static $instance;
 
 	private $charset = "utf8";
@@ -11,6 +12,7 @@ class DBManager {
 	private $database = DBNAME;
 	private $type = DBTYPE;
 	private $host = DBHOST;
+
 	private $connection;
 
 	private function __construct() {
