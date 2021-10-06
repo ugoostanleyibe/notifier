@@ -3,10 +3,10 @@
 # Configure For Database
 # Define Constants
 
-define("DBPASS", "#ClassExco1");
-define("DBHOST", "localhost");
-define("DBUSER", "classexco");
-define("DBNAME", "notifier");
+define("DBPASS", "asusROG741jm");
+define("DBHOST", "notifier.freevar.com");
+define("DBUSER", "319271");
+define("DBNAME", "319271");
 define("DBTYPE", "mysql");
 
 ?>

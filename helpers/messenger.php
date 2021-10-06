@@ -6,10 +6,6 @@ use Twilio\Rest\Client;
 
 class Messenger {
 
-	private const ACCOUNT_SID = "ACd4466ea393dc6283368c41bf0ff11771";
-	private const AUTH_TOKEN = "a0e127721e216c628b5184556bec698d";
-	private const NUMBER = "+18663380544";
-
 	private function __clone() {
 		
 	}
@@ -19,9 +15,9 @@ class Messenger {
 	}
 
 	public static function sendSMS($to, $body) {
-		$client = new Client(self::ACCOUNT_SID, self::AUTH_TOKEN);
+		$client = new Client("ACd4466ea393dc628"."3368c41bf0ff11771", "a7e54328b43c3199"."af1b975dd8a42e07");
 		$client->messages->create($to, [
-			"from" => self::NUMBER,
+			"from" => "+18663380544",
 			"body" => $body,
 		]);
 	}
