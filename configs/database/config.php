@@ -1,12 +1,14 @@
 <?php
 
 # Configure For Database
-# Define Constants
+# Define Connection Constants
 
-define("DBPASS", "asusROG741jm");
-define("DBHOST", "notifier.freevar.com");
-define("DBUSER", "319271");
-define("DBNAME", "319271");
+$data = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+define("DBNAME", substr($data["path"], 1));
+define("DBHOST", $data["host"]);
+define("DBUSER", $data["user"]);
+define("DBPASS", $data["pass"]);
 define("DBTYPE", "mysql");
 
 ?>
