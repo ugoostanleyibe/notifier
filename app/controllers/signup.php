@@ -19,7 +19,7 @@ class SignUpController extends Controller {
 				}
 
 				$id = $this->userModel->create($phone, Auth::hash($password), $admin);
-				Messenger::enrol($phone);
+				Messenger::registerNumber($phone);
 
 				exit (json_encode([
 					"user_id" => $id,
