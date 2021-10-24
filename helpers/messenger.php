@@ -8,7 +8,7 @@ define("TWILIO_NUMBER", "+18663380544");
 
 final class Messenger {
 
-	private static $client;
+	private static Twilio\Rest\Client $client;
 
 	private function __clone() {
 		
@@ -21,12 +21,6 @@ final class Messenger {
 	private static function getClient() {
 		self::$client ??= new Twilio\Rest\Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 		return self::$client;
-	}
-
-	public static function registerNumber($number) {
-		self::getClient()->validationRequests->create($number, [
-			"friendlyName" => "Feline",
-		]);
 	}
 
 	public static function sendSMS($to, $body) {
