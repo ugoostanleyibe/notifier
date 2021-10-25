@@ -1,5 +1,9 @@
 <?php
 
+header("Access-Control-Allow-Headers: X-Requested-With");
+header("Access-Control-Allow-Methods: GET, POST");
+header("Access-Control-Allow-Origin: *");
+
 define("BASEURL", 1);
 
 # Load Foundation
